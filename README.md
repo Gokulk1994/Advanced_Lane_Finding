@@ -39,6 +39,7 @@ The main of this Advanced Lane Finding project is to,
 
 The given chessboard images was processed to identify the chessboard corners using the function **IdentifyChessBoardCorners()**. Then the Camera matrix and the Distortion coefficient was calculated in the function **CalibrateCamera()**.
 
+![Chess](output_images/chess.png)
 
 **2. Distortion Correction:**
 
@@ -52,19 +53,27 @@ The L and S channels are used by applying channel filter and limiting values wit
 
 Transform the obtained thresholded image to a top view image (Bird’s eye view). This can be done by Perspective Transformation of images using source and destination points which was implemented in the function **PerspectiveTransfrm()**. The transformed lanes are always parallel.
 
+![PerspectiveTransform](output_images/pertrans.png)
+
 **5. Identify Lane pixel and draw polynomial:**
 
 Now identify the lane pixels from the rectified image. This can be done by obtaining the Histogram of the images. Then with the help of Histogram identify 2 max points which will give the lane positions. Start a rectangular area for search of lane pixels, slide it across the image to identify the lane pixels. Based on the observed pixel value find a polynomial which best suits the lane lines. This was done in the function **find_lane_pixels()** and **fit_polynomial()**.
 
+![SlidingWindow](output_images/slide.png)
 
 Also, instead of going for a new histogram and sliding window each time, process the lane pixels from the last obtained pixel values by searching around technique. This was obtained using the function **search_around_poly()**.
 
+![SearchAround](output_images/searcharound.png)
 
 **6. Radius of Curvature and Center of Vehicle:**
 Calculate the Radius of the curvature using the provided formula and the polynomial curve values. Refer **measure_curvature_real()** function for the implementation of calculation of the curvature. The vehicle center is calculated inside the pipeline function itself.
 
 **7. Final Output:**
 A polygon was drawn over the actual image to display the identification of lane markings. Also, the radius of curvature and Center of vehicle texts was displayed in the same image.
+
+![FinalOutput](output_images/final.png)
+
+**Final Output Video : "project_video_output.mp4" **
 
 ## Pipeline :
 
