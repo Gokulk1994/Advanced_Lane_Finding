@@ -5,15 +5,15 @@ This project identifies both yellow and white Lane Lines in different conditions
 
 The main of this Advanced Lane Finding project is to,
 
-* Identify both yellow and white Lane Lines in different conditions like roads with shadows and color gradient.
+* Identify both **yellow and white Lane** Lines in different conditions like roads with shadows and color gradient.
 
-* Rejection of Shadows and, variation in lane and environment colors shall be done using HLS filter and Sobel Operator (Absolute, Magnitude and Direction filters).
+* Rejection of **Shadows** and, variation in lane and environment colors shall be done using HLS filter and Sobel Operator (Absolute, Magnitude and Direction filters).
 
-* The image which was processed to identify the lanes shall be free from distortion. Distortion shall be avoided by using the calibration matrix obtained from calibrating the camera with the provided Chess board images.
+* The image which was processed to identify the lanes shall be **free from distortion**. Distortion shall be avoided by using the **calibration matrix** obtained from calibrating the camera with the provided **Chess board images**.
 
-* The Lane pixels shall be identified using the image in Bird’s Eye view (Top View) and not from normal view. This rectified image shall be obtained by using Perspective transformation on the original image with predefined Source and Destination points.
+* The Lane pixels shall be identified using the image in **Bird’s Eye view**(Top View) and not from normal view. This rectified image shall be obtained by using **Perspective transformation** on the original image with predefined Source and Destination points.
 
-* Identify the curvature of the Lane (in meters) and vehicle position with respect to center. These details shall be displayed in the final image.
+* Identify the **curvature of the Lane** (in meters) and **vehicle position** with respect to center. These details shall be displayed in the final image.
 
 * Merge the identified Lane boundaries (with color) into the original image.
 
